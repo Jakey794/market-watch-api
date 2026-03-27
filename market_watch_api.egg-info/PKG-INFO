@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: market-watch-api
+Version: 0.1.0
+Summary: Backend-first Market Watch & Alerts API.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn[standard]>=0.30.0
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: psycopg[binary]>=3.1.0
+Requires-Dist: pydantic-settings>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: httpx>=0.27.0; extra == "dev"
+Requires-Dist: ruff>=0.6.0; extra == "dev"
+
+# market-watch-api
+
+Backend-first Market Watch & Alerts API for personal watchlists and finance research workflows.
+
+## Current status
+
+This repo is currently at **Step 2: repo + development skeleton**.
+
+In place now:
+
+- FastAPI application entrypoint
+- env-based configuration
+- SQLAlchemy database scaffold
+- `GET /health` endpoint
+- pytest setup
+- Ruff lint/format setup
+- local PostgreSQL via Docker Compose
+
+## V1 boundaries
+
+Locked in `PROJECT_SCOPE.md`:
+
+- assets: stocks and ETFs only
+- alert types:
+  - `price_above`
+  - `price_below`
+  - `pct_move_up_1d`
+  - `pct_move_down_1d`
+- market data cadence: every 15 minutes during US market hours on trading days
+- deployment target: Render
+
+## Quickstart
+
+### 1. Create your local env file
+
+```bash
+cp .env.example .env
