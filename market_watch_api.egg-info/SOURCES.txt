@@ -13,4 +13,3 @@ market_watch_api.egg-info/SOURCES.txt
 market_watch_api.egg-info/dependency_links.txt
 market_watch_api.egg-info/requires.txt
 market_watch_api.egg-info/top_level.txt
-tests/test_health.py
